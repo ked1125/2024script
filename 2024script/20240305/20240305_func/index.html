@@ -31,6 +31,16 @@
             // alert('✨')
             // document.write("학생의 이름은 " +name+"이고, <br> 학생의 나이는 "+age+"세 입니다.")
 
+
+            const nameElm = document.getElementsByClassName('name')
+
+            for(let i = 0 ; i<7 ; i++){
+                document.getElementsByClassName('name')[i].innerHTML = name
+            }
+
+
+
+
             document.getElementsByClassName('name')[0].innerHTML = name ; 
             document.getElementsByClassName('age')[0].innerHTML = age ; 
 
@@ -39,9 +49,17 @@
     </script>
 
 
+    <!-- 우선순위낮음 * < tag < class < id < inline style < !important 우선순위높음  -->
+
+
 
     <div>
         이름은 <span class="name">나</span> 이고, 나이는 <span class="age">n</span> 세 입니다.
+        <span class="name">나</span>
+        <span class="name">나</span>
+        <span class="name">나</span>
+        <span class="name">나</span>
+        <span class="name">나</span>
     </div>
 
 
