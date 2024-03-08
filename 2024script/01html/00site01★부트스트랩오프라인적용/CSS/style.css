@@ -110,3 +110,32 @@ body {
   font-weight: bold;
   color: white;
 }
+
+.banner .cardWrap {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardWrap img {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  transform: scale(1);
+}
+
+.cardWrap:hover img {
+  transform: scale(1.1);
+}
+
+.cardWrap .txtWrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(1, 41, 93, 0.56);
+  padding: 20px 0;
+}
+
+/* .section .cardWrap{} */
