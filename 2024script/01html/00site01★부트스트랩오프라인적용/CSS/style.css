@@ -148,3 +148,13 @@ body {
 .boxShadow {
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.3);
 }
+
+.input-group {
+  border-radius: 20px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 16px;
+  top: 17px;
+}
