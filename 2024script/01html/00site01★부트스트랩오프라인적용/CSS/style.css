@@ -139,3 +139,12 @@ body {
 }
 
 /* .section .cardWrap{} */
+
+/* common */
+.colorGray {
+  background-color: #eee !important;
+}
+
+.boxShadow {
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.3);
+}
