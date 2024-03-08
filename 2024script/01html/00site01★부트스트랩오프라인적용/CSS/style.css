@@ -21,6 +21,8 @@ li {
 
 body {
   height: 200%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .swiper {
@@ -57,4 +59,54 @@ body {
   width: 1240px;
   display: flex;
   align-items: center;
+}
+
+/* header */
+.hd {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+.hd .gnbWrap ul {
+  display: flex;
+  height: 100%;
+}
+.gnbWrap li {
+  /* background: skyblue; */
+}
+
+.gnbWrap li a {
+  /* display: block; */
+  height: 100%;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.utilWrap ul {
+  display: flex;
+  height: 100%;
+}
+.utilWrap li {
+  /* background-color: skyblue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 5px; */
+  color: white;
+}
+.utilWrap a {
+  /* background-color: pink; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  font-weight: bold;
+  color: white;
 }
