@@ -1,0 +1,12 @@
+*****가운데 정렬 할 때 사용하는것*****
+*block <- div tag
+m0 auto
+
+*position
+poa / por 이후
+top right
+
+*flex
+df
+jfc
+ali
