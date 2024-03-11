@@ -23,7 +23,6 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <!-- sm md lg ... 사이즈 확인해보기 -->
         <div class="container">
           <a class="navbar-brand" href="#">logo</a>
           <button
@@ -38,12 +37,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-              <!-- me-auto -> margin end - margin right랑 유사? -->
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="#" aria-current="page">
-                  Home <span class="visually-hidden">(current)</span></a
-                >
+                <a class="nav-link active" href="#" aria-current="page">HOME</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">ABOUT</a>
@@ -63,26 +59,117 @@
       </nav>
     </header>
 
-    <div class="visual">
+    <!-- visual -->
+    <div class="visual mb-5">
       <div class="container">
         <div class="row">
-          <div
-            class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-start justify-content-center order-2 order-md-1"
-          >
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p class="text-center text-md-start">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
-              officiis?
-            </p>
-            <a href="#" class="btn btn-primary">more</a>
+          <div class="col-md-6 d-flex align-items-center order-2 order-md-1">
+            <div>
+              <h2 class="text-center text-md-start">
+                Lorem ipsum dolor sit amet.
+              </h2>
+              <p class="text-center text-md-start">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint,
+                aliquid.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary d-block d-md-inline-block mb-3"
+              >
+                more
+              </a>
+            </div>
           </div>
-          <div class="col-12 col-md-6 bg-info p-5 order-1 order-md-2">
-            <!-- <div class="col-md-6 bg-info"> col-12는 기본값이니까 생략가능하다. -->
+          <div class="col-md-6 p-5 order-1 order-md-2">
             <img src="./images/slider.svg" alt="" class="img-fluid" />
           </div>
         </div>
       </div>
     </div>
+
+    <!-- content  -->
+    <div class="container py-3 cont-1st mb-5">
+      <h2 class="text-center mb-3">gallery</h2>
+      <p class="text-center mb-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+        quaerat.
+      </p>
+      <div class="row">
+        <div class="col-md-3 cardWrap mb-3">
+          <!-- card 1st start -->
+          <div class="card p-4 py-5">
+            <img
+              class="card-img-top mb-3"
+              src="./images/destaque1.svg"
+              alt="Title"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Lorem, ipsum.</h4>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                iste.
+              </p>
+            </div>
+          </div>
+          <!-- card 1st end -->
+        </div>
+        <div class="col-md-3 cardWrap mb-3">
+          <!-- card 2st start -->
+          <div class="card p-4 py-5">
+            <img
+              class="card-img-top mb-3"
+              src="./images/destaque2.svg"
+              alt="Title"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Lorem, ipsum.</h4>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                iste.
+              </p>
+            </div>
+          </div>
+          <!-- card 2st end -->
+        </div>
+        <div class="col-md-3 cardWrap mb-3">
+          <!-- card 3st start -->
+          <div class="card p-4 py-5">
+            <img
+              class="card-img-top mb-3"
+              src="./images/destaque3.svg"
+              alt="Title"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Lorem, ipsum.</h4>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                iste.
+              </p>
+            </div>
+          </div>
+          <!-- card 3st end -->
+        </div>
+        <div class="col-md-3 cardWrap mb-3">
+          <!-- card 4st start -->
+          <div class="card p-4 py-5">
+            <img
+              class="card-img-top mb-3"
+              src="./images/destaque4.svg"
+              alt="Title"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Lorem, ipsum.</h4>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                iste.
+              </p>
+            </div>
+          </div>
+          <!-- card 4st end -->
+        </div>
+      </div>
+    </div>
+
     <main></main>
     <footer>
       <!-- place footer here -->
