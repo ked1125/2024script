@@ -21,10 +21,8 @@ li {
   display: flex;
   gap: 5px;
 }
-
 .inpWrap input {
   flex: 1;
-  /* flex: 1 0 auto; */
   padding: 5px 10px;
 }
 
@@ -32,12 +30,17 @@ li {
   width: 400px;
   margin: 0 auto;
 }
-
-.viewData > .viewList {
+.viewData .viewList {
+  padding: 10px 10px;
   display: flex;
-  padding: 10px 16px;
   justify-content: space-between;
+  border-bottom: 1px solid #eee;
 }
+.viewData .viewList:hover,
+.viewData .viewList.active {
+  background: rgba(249, 168, 16, 0.192);
+}
+
 .iconWrap {
   display: flex;
   gap: 10px;
