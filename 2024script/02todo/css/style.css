@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.inpWrap {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5px;
+}
+
+.inpWrap input {
+  flex: 1;
+  /* flex: 1 0 auto; */
+  padding: 5px 10px;
+}
+
+.viewData {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.viewData > .viewList {
+  display: flex;
+  padding: 10px 16px;
+  justify-content: space-between;
+}
+.iconWrap {
+  display: flex;
+  gap: 10px;
+}
