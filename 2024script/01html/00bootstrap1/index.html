@@ -170,6 +170,32 @@
       </div>
     </div>
 
+    <!-- portfolio -->
+    <div class="container cont-2st">
+      <h2>PORTFOLIO</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam,
+        perferendis!
+      </p>
+      <div class="btn-group">
+        <div class="btn btn-primary active" data-filter="">ALL</div>
+        <div class="btn btn-primary" data-filter="web">WEBSITE</div>
+        <div class="btn btn-primary" data-filter="java">JAVA</div>
+        <div class="btn btn-primary" data-filter="node">NODE</div>
+      </div>
+      <div class="row view">
+        <div class="web">
+          <img src="./images/servicos/1.jpg" alt="" />
+        </div>
+        <div class="java">
+          <img src="./images/servicos/2.jpg" alt="" />
+        </div>
+        <div class="node">
+          <img src="./images/servicos/3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
     <main></main>
     <footer>
       <!-- place footer here -->
@@ -186,5 +212,25 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <script>
+      $(".cont-2st .btn-group div").click(function () {
+        alert("test" + $(this).index());
+        $(".cont-2st .btn-group div").removeClass("active");
+        $(this).addClass("active");
+
+        $(".cont-2st .view").isotope({ filter: "web" });
+      });
+
+      // const divElm = document.querySelectorAll(".cont-2st .btn-group div");
+      // for (let i = 0; i < divElm.length; i++) {
+      //   divElm[i].addEventListener("click", function () {
+      //     alert("test" + i);
+      //   });
+      // }
+    </script>
   </body>
 </html>
