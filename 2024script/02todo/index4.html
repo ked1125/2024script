@@ -29,6 +29,15 @@
     </ul>
 
     <script>
+      // CRUD
+      // 1. 디자인완료( 테스트 화면 )
+      // 2. 입력창에 자료입력 -> 버튼 클릭 -> 입력창 글씨삭제
+      // 3. 자료입력안됨 -> 버튼클릭 -> 에러메세지(자료입력하세요)
+      // 4. 데이터 푸쉬( listData = []) (localstorage 같이)
+      // 5. listData = [] / localstorage 자료 출력
+      // 6. 수정이벤트 제작
+      // 7. 삭제이벤트 제작
+
       let viewElm = document.querySelector(".viewData");
       //   document.querySelectorAll("body > div.viewData")[0]
       //   document.getElementsByClassName("viewData")[0]
@@ -53,6 +62,7 @@
           inpElm.value = ""; // input창 초기화
         } else {
           alert("오늘의 할일을 입력하세요"); //오류
+          inpElm.focus();
         }
       });
 
@@ -75,13 +85,24 @@
           text += '    <div class="iconWrap">';
 
           if (listData[i].check) {
+            //check true일때
             text +=
-              '    <a href="#"><i class="fa-regular fa-square-check"></i></a>';
+              '    <a href="#" onclick="check(' +
+              i +
+              ')"><i class="fa-regular fa-square-check"></i></a>';
           } else {
-            text += '    <a href="#"><i class="fa-regular fa-square"></i></a>';
+            //check false 일때
+            text +=
+              '    <a href="#" onclick="check(' +
+              i +
+              ')"><i class="fa-regular fa-square"></i></a>';
           }
 
-          text += '    <a href="#"><i class="fa-solid fa-trash"></i></a>';
+          // text += `    <a href="#" onclick="del(${i})"><i class="fa-solid fa-trash"></i></a>`;
+          text +=
+            '    <a href="#" onclick="del(' +
+            i +
+            ')"><i class="fa-solid fa-trash"></i></a>';
           text += "    </div>";
           text += "</li>";
         }
@@ -89,6 +110,28 @@
         viewElm.innerHTML = text;
       }
       view();
+
+      function del(idx) {
+        listData.splice(idx, 1);
+
+        //localstorage에 json data 수정업데이트
+        let valueData = JSON.stringify(listData);
+        localStorage.setItem("todoData", valueData);
+
+        //다시리스트호출
+        view();
+      }
+
+      function check(idx) {
+        listData[idx].check = !listData[idx].check;
+
+        //localstorage에 json data 수정업데이트
+        let valueData = JSON.stringify(listData);
+        localStorage.setItem("todoData", valueData);
+
+        //다시리스트호출
+        view();
+      }
     </script>
   </body>
 </html>
